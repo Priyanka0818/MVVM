@@ -1,10 +1,12 @@
 package com.app.mvvmdemo.apicall
 
+import com.app.mvvmdemo.apiclient.APIClient
+
 class APICallHandler {
 
     companion object {
         val apiCallInterface: APICallInterface? =
-            com.app.mvvmdemo.apiclient.APIClient.getClient()?.create(APICallInterface::class.java)
+            APIClient.getClient()?.create(APICallInterface::class.java)
     }
 
 
